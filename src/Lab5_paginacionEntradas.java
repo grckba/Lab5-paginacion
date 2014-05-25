@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Lab5_paginacion {
+public class Lab5_paginacionEntradas {
 
     public static void main(String[] args) {
         Random numAleatorio;
@@ -32,7 +32,9 @@ public class Lab5_paginacion {
         System.out.println(frames);
 
         //System.out.println("Número de fallos con FIFO: "+FIFO("70120304230321201701", 3));
-        System.out.println("Número de fallos con FIFO: "+FIFO(seriePaginas, frames));
+        //System.out.println("Número de fallos con FIFO: "+FIFO(seriePaginas, frames));
+        System.out.println("Número de fallos con FIFO: "+FIFO("123351226215763", 4));
+        System.out.println("Número de fallos con Optimo: "+Optimo("043214630", 3));
     }
 
     public static int FIFO(String serieAleatoria, int frames) {
@@ -68,9 +70,7 @@ public class Lab5_paginacion {
     }
 
     public int LRU(String seriePaginas, int frames) {
-        int fallos = 0;
-        // TODO
-        return fallos;
+       
     }
 
 public static int Optimo(String serieAleatoria, int frames) {
