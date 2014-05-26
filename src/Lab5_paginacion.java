@@ -16,11 +16,11 @@ public class Lab5_paginacion {
 
            frames = Integer.parseInt(args[1]);
         }else{
-           System.out.println("Ingrese n:");
+           System.out.print("Ingrese n: ");
            Scanner entradaEscaner = new Scanner(System.in);
            n = Integer.parseInt(entradaEscaner.nextLine());
 
-           System.out.println("Ingrese número de frames:");
+           System.out.print("Ingrese número de frames: ");
            frames = Integer.parseInt(entradaEscaner.nextLine());
         }
 
@@ -28,13 +28,14 @@ public class Lab5_paginacion {
             seriePaginas += numAleatorio.nextInt(10);
         }
 
-        System.out.println(seriePaginas);
-        System.out.println(frames);
+        System.out.println("\nSerie: "+seriePaginas);
+        System.out.println("Frames: "+frames);
 
 
-        System.out.println("Número de fallos con Optimo: "+Optimo(seriePaginas, frames));
+        System.out.println("\nNúmero de fallos con Optimo: "+Optimo(seriePaginas, frames));
         System.out.println("Número de fallos con FIFO: "+FIFO(seriePaginas, frames));
         System.out.println("Número de fallos con LRU: "+LRU(seriePaginas, frames));
+        System.out.println();
     }
 
     public static int FIFO(String serieAleatoria, int frames) {
